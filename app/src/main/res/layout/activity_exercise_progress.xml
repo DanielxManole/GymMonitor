@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Progres pe Exerciții"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Alege Grupa:"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/spinnerProgMuscle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. Alege Exercițiul (din istoricul tău):"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/spinnerProgExercise"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnGenerateChart"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Generează Grafic"
+        android:backgroundTint="#2196F3"
+        android:layout_marginBottom="20dp"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chartExercise"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

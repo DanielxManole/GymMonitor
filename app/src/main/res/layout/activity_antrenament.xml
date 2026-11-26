@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sesiune Nouă"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/etSessionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:minHeight="48dp"
+            android:hint="Nume (ex: Piept forță)"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/etWorkoutDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:minHeight="48dp"
+            android:hint="Data Antrenamentului"
+            android:focusable="false"
+            android:clickable="true"
+            android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+            android:layout_marginBottom="20dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:text="1. Grupa &amp; Exercițiul"
+                    android:textStyle="bold"
+                    android:textColor="#2196F3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerMuscleGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:layout_marginBottom="8dp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerExercises"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/etCustomExercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:hint="Nume exercițiu..."
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"
+                    android:layout_marginVertical="10dp"/>
+
+                <TextView
+                    android:text="2. Performanță"
+                    android:textStyle="bold"
+                    android:textColor="#2196F3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView android:text="Greutate:" android:layout_width="80dp" android:layout_height="wrap_content" android:textStyle="bold"/>
+                    <Button android:id="@+id/btnKgMinus" android:layout_width="45dp" android:layout_height="45dp" android:text="-" android:textSize="20sp" style="@style/Widget.AppCompat.Button.Small"/>
+                    <EditText android:id="@+id/etKg" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:gravity="center" android:inputType="numberDecimal" android:hint="0" android:minHeight="48dp"/>
+                    <Button android:id="@+id/btnKgPlus" android:layout_width="45dp" android:layout_height="45dp" android:text="+" android:textSize="20sp" style="@style/Widget.AppCompat.Button.Small"/>
+                    <TextView android:text="KG" android:layout_width="30dp" android:layout_height="wrap_content" android:layout_marginStart="5dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="15dp">
+
+                    <TextView android:text="Repetări:" android:layout_width="80dp" android:layout_height="wrap_content" android:textStyle="bold"/>
+                    <Button android:id="@+id/btnRepsMinus" android:layout_width="45dp" android:layout_height="45dp" android:text="-" android:textSize="20sp" style="@style/Widget.AppCompat.Button.Small"/>
+                    <EditText android:id="@+id/etReps" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:gravity="center" android:inputType="number" android:hint="0" android:minHeight="48dp"/>
+                    <Button android:id="@+id/btnRepsPlus" android:layout_width="45dp" android:layout_height="45dp" android:text="+" android:textSize="20sp" style="@style/Widget.AppCompat.Button.Small"/>
+                    <TextView android:text="reps" android:layout_width="30dp" android:layout_height="wrap_content" android:layout_marginStart="5dp"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnAddExercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="Adaugă Seria"
+                    android:backgroundTint="#2196F3"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sumar Antrenament:"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/llExercisesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnFinishWorkout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Salvează Tot"
+            android:textSize="18sp"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginBottom="30dp"/>
+
+    </LinearLayout>
+</ScrollView>

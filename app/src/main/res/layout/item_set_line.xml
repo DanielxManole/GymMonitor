@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="5dp">
+
+    <TextView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:text="-"
+        android:background="@drawable/ic_launcher_background"
+        android:backgroundTint="#E0E0E0"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="#555"
+        android:layout_marginEnd="10dp"/>
+    <TextView
+        android:id="@+id/tvSetDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="100kg x 8 reps"
+        android:textSize="16sp"
+        android:textColor="#333"/>
+
+    <ImageButton
+        android:id="@+id/btnDeleteSet"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:alpha="0.6"/>
+
+</LinearLayout>
